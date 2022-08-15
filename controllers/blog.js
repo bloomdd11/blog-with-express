@@ -1,7 +1,13 @@
-
+const customAPIError = require('../errors/custom-api-error')
 
 const getAllBlogs = async (req, res) => {
-  return res.send('get all blogs')
+  try {
+    throw new customAPIError('custom error', 404)
+    return res.status(401).send('error at get all blogs route')
+  } catch (error) {
+    //console.log(error.message);
+    //console.log(error.statusCode);
+  }
 }
 const getSingleBlog = async (req, res) => {
   return res.send('get single blog')
