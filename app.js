@@ -21,8 +21,6 @@ app.use(express.json())
 
 // routes
 app.get('/', (req, res) => {
-  //throw new Error('error at app')
-  throw new customAPIError('custom error', 401)
   res.send('server is running')
 })
 
