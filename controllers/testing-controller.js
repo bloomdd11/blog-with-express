@@ -1,7 +1,8 @@
 const testDocsSchema = require('../model/testing-model')
 
 const testRegisterUser = async (req, res) => {
-  res.send('register')
+  const testDocs = await (testDocsSchema.create(req.body))
+  res.json(testDocs)
 }
 
 const testViewUser = async (req, res) => {
