@@ -6,7 +6,7 @@ const errorHandlerMiddleware = (err, req, res, next) => {
 
   if (err.name === 'CastError') {
     const { value: { _id: blogID } } = err
-    customError.msg = `cannot find the blog with id : ${blogID}`
+    customError.msg = `cannot find the blog with id fuck: ${blogID}`
     customError.statusCode = 401
   }
   //return res.status(customError.statusCode).json({ err })

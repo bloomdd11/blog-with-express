@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 app.use('/api/v1', blog)
 
 // test-routes
-//app.use('/api/test', testRoute)
+app.use('/api/test', testRoute)
 
 app.use(notFoundMiddleware)
 app.use(errorHandlerMiddleware)
